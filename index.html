@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+        <a href="#" class="logo">기분 째지는 파티</a>
+        <ul>
+            <li><a href="#" class="active">Manner</a></li>
+            <li><a href="#">makes</a></li>
+            <li><a href="#">man</a></li>
+            <li><a href="#">Agree?</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">초대합니다</h2>
+        <a href="#sec" id="btn">이제 시작이야</a>
+        <img src="images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2> 기분 째지는 파티 </h2>
+        <p>
+            주제 : 20대와 30대 사이 <br><br>
+
+            날짜 : 2023년 12월 29일(금) <br><br>
+
+            시간 : 19:00 - 모두가 집에갈때까지 <br><br>
+
+            드레스코드 : 연말시상식룩 <br><br>
+
+            참가비 : 돈 두둑하게 <br> <br>
+
+            MEMBER : 조영진 / 박승면 / 전상배 / 최재훈 / 송유현 / 문지훈
+        </p>
+      <br><br><br><br>
+      <h2> 기째파(기분째지는파티) RULES</h2>
+      <p>
+        1. 오는시간을 엄수해 주세요 (19:00까지 약속장소 도착) <br><br>
+        부득이한 사정으로 늦게 될 경우 톡방으로 사전에 말씀 부탁드립니다 <br><br>
+        2. 메뉴는 삼계탕, 삼겹살, 육회, 회, 갑각류 등 맛난걸로 선정합시다 <br><br>
+        3. 필요시 장소대여도 가능하니 모이기 전 적극적 협의를 합시다 <br><br>
+        4. 뚝배기를 서로 깨고싶어도 한발 양보합시다<br><br>
+        5. 서로의 과거를 헐뜯지 말고 미래지향적이고 건설적인 모임을 가집시다
+
+      </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 1.5 + 'px';
+        })
+    </script>
+  </body>
+  </html>
