@@ -28,7 +28,7 @@ header .logo
     color: #fff;
     font-weight: 700;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 8em;
     text-transform: uppercase;
     Letter-spacing: 2px;
 }
@@ -123,12 +123,12 @@ section img#mountains_front
 }
 .sec h2
 {
-    font-size: 3.5em;
+    font-size: 10em;
     margin-bottom: 10px;
     color: #fff
 }
 .sec p
 {
-    font-size: 1em;
+    font-size: 8em;
     color: #fff
 }
